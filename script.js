@@ -4,6 +4,9 @@ for (let i = 0; i < 256; i++) {
     gridSquare.classList.add("gridSquare");
     gridSquare.style.width = "37.5px";
     gridSquare.style.height = "37.5px";
+    gridSquare.addEventListener('mouseenter', function() {
+        gridSquare.style.backgroundColor = "blue";
+    })
     container.appendChild(gridSquare);
 } 
 /* 
