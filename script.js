@@ -5,7 +5,10 @@ btn.addEventListener("click", function() {
     let gridSize = prompt("Enter grid size (max 100)");
     if (gridSize > 100) {
     alert("Please enter a valid grid size");
+    return;
     }
+
+    container.innerHTML = "";
     
     for (let i = 0; i < gridSize ** 2; i++) {
     const gridSquare = document.createElement("div");
@@ -17,7 +20,6 @@ btn.addEventListener("click", function() {
     })
     container.appendChild(gridSquare);
 } 
-
 });
 
 /* 
