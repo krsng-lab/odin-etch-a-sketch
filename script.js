@@ -13,7 +13,10 @@ for (let i = 0; i < 256; i++) {
 const btn = document.querySelector("#btn");
 btn.addEventListener("click", function() {
     let gridSize = prompt("Enter grid size (max 100)");
-    });
+    if (gridSize > 100) {
+    alert("Please enter a valid grid size");
+    }}
+);
 
 /* 
 The goal is to make the squares divs appear as grids in the 
