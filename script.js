@@ -9,18 +9,20 @@ btn.addEventListener("click", function() {
     }
 
     container.innerHTML = "";
+
+    function getRandomColor() {
+        const red = Math.floor(Math.random() * 256);
+        const green = Math.floor(Math.random() * 256);
+        const blue = Math.floor(Math.random() * 256);
+        return `rgb(${red}, ${green}, ${blue})`;
+    }
     
     for (let i = 0; i < gridSize ** 2; i++) {
     const gridSquare = document.createElement("div");
     gridSquare.classList.add("gridSquare");
     gridSquare.style.width = `${600/gridSize}px`;
     gridSquare.style.height = `${600/gridSize}px`;
-    gridSquare.addEventListener('mouseenter', function() {
-        const red = Math.floor(Math.random() * 256);
-        const green = Math.floor(Math.random() * 256);
-        const blue = Math.floor(Math.random() * 256);
-        gridSquare.style.backgroundColor = `rgb(${red}, ${green}, ${blue})`;
-    })
+    gridSquare.addEventListener('mouseenter', () => gridSquare.style.backgroundColor = getRandomColor());
     container.appendChild(gridSquare);
 } 
 });
